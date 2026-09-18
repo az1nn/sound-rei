@@ -6,7 +6,7 @@ STATE: V2_CODE_COMPLETE_PUBLICATION_GATES_PENDING
 MODE: WATCH
 CANONICAL SOURCE: Project state: GitHub repository az1nn/sound-rei | SIGA procedure: az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md
 
-CURRENT VERSION / HEAD: 9e6f0a1b67b76225a4ea3955609f82ef1f149b8a
+CURRENT VERSION / HEAD: master (remote HEAD reconciled at 817d5ee38f2816a2891c3a115c50e82f703beb13 before this handoff update)
 BASE: master
 BRANCH / ENV: master / GitHub Pages target
 PR / MR / TASK: none
@@ -14,25 +14,28 @@ SPEC / ADR: az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md
 
 DONE:
 - SoundREI Landing Page V2 is committed on master.
-- Reconciled the standalone SIGA execution against remote GitHub state.
-- Removed the duplicate SIGA protocol from sound-rei; the single procedural source remains az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md.
-- Preserved only this workstream-specific CAVEMAN handoff in sound-rei.
+- Reconciled standalone SIGA against current remote GitHub state.
+- Confirmed the canonical SIGA skill remains only in az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md.
+- Confirmed the V2 static page, vector assets and contact-config integration are present.
+- Preserved this repository only as a workstream handoff location; no duplicate SIGA specification exists here.
 
 VERIFY:
-- master contained no open PRs and no alternate branches during reconciliation.
-- HEAD had no commit status checks or pull-request workflow runs.
-- config.js exists but whatsapp, instagram and email are still empty.
-- Duplicate file skills/siga-handoff/SKILL.md removed in commit 9e6f0a1b67b76225a4ea3955609f82ef1f149b8a.
-- Canonical SIGA skill re-read from cpxlabs-admin master (blob 28f92c9f8e596265c958baac90d2066f892fb72c).
-- Expected GitHub Pages URL could not be independently confirmed live from available web access.
+- Only branch found: master.
+- No open PRs and no open issues.
+- HEAD 817d5ee38f2816a2891c3a115c50e82f703beb13 had no commit status checks and no workflow runs.
+- config.js still has empty whatsapp, instagram and email values.
+- index.html loads config.js, hides the floating WhatsApp CTA when no number exists, and blocks quote submission until a WhatsApp number is configured.
+- README documents GitHub Pages deployment from master / (root).
+- Canonical SIGA skill re-read from cpxlabs-admin master, blob 28f92c9f8e596265c958baac90d2066f892fb72c.
+- Expected GitHub Pages URL https://az1nn.github.io/sound-rei/ could not be independently confirmed from the available web/network access in this run.
 
 GATES:
-- GitHub Pages enablement/deployment still requires verification or manual repository configuration.
+- GitHub Pages enablement/deployment must still be verified in repository Settings -> Pages or by a reachable live URL.
 - Real SoundREI whatsapp / instagram / email values are required before the commercial CTA is production-ready.
 
 BLOCKERS:
 - No code blocker in the repository.
-- Production publication remains gated by Pages state and missing commercial contact data.
+- Production publication is blocked by the two publication gates above.
 
 INVARIANTS:
 - SIGA procedural definition exists only in az1nn/cpxlabs-admin.
@@ -40,11 +43,14 @@ INVARIANTS:
 - REAL STATE > HANDOFF > MEMORY > CHAT.
 - VERIFY-FIRST before continuation.
 - Do not declare the landing production-live until the live URL and CTA path are verified.
+- Do not start a parallel V3 while these V2 publication gates remain pending.
 
 NEXT:
-- Remain in WATCH for the publication gates; do not start a parallel V3 workstream.
-- Once Pages and contact data are available, populate config.js, verify the live site/mobile CTA, then reclassify.
-- After V2 is verifiably live with working commercial contact flow and no pending gate, ADVANCE to the next SoundREI unit.
+- Remain in WATCH.
+- Verify/enable GitHub Pages for master / (root).
+- Populate config.js with the real SoundREI commercial contacts.
+- Verify the live page on desktop/mobile and exercise the WhatsApp quote flow.
+- Only after those gates pass, reclassify to ADVANCE and derive the next SoundREI unit.
 
 VERIFY-FIRST:
-Read az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md, then this handoff. Inspect sound-rei master HEAD, open PRs/issues, Actions/status, config.js and the expected Pages URL. Remote/live state wins over this handoff.
+Read az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md, then this handoff. Inspect sound-rei master HEAD, branches, open PRs/issues, Actions/status, config.js and the expected Pages URL. Remote/live state wins over this handoff.
