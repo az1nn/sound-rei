@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t d">
+<title id="t">Símbolo SoundREI</title><desc id="d">Coroa dourada integrada a barras de equalizador.</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe79a"/><stop offset=".42" stop-color="#f2c654"/><stop offset="1" stop-color="#b67b12"/></linearGradient></defs>
+<g fill="none" stroke="url(#g)" stroke-linecap="round" stroke-linejoin="round"><path d="M75 177 130 110l61 66 65-97 65 97 61-66 55 67-24 182H99Z" stroke-width="22"/><path d="M112 359h288" stroke-width="22"/></g>
+<g fill="url(#g)"><circle cx="130" cy="92" r="15"/><circle cx="256" cy="58" r="15"/><circle cx="382" cy="92" r="15"/><rect x="127" y="234" width="22" height="70" rx="11"/><rect x="166" y="208" width="22" height="122" rx="11"/><rect x="205" y="177" width="22" height="184" rx="11"/><rect x="245" y="145" width="22" height="246" rx="11"/><rect x="285" y="177" width="22" height="184" rx="11"/><rect x="324" y="208" width="22" height="122" rx="11"/><rect x="363" y="234" width="22" height="70" rx="11"/></g>
+</svg>
