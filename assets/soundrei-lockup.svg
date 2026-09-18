@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="t d">
+<title id="t">SoundREI</title><desc id="d">Logotipo SoundREI com coroa e equalizador dourado.</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe79a"/><stop offset=".42" stop-color="#f2c654"/><stop offset="1" stop-color="#b67b12"/></linearGradient></defs>
+<g transform="translate(295 35) scale(.72)">
+<g fill="none" stroke="url(#g)" stroke-linecap="round" stroke-linejoin="round"><path d="M75 177 130 110l61 66 65-97 65 97 61-66 55 67-24 182H99Z" stroke-width="22"/><path d="M112 359h288" stroke-width="22"/></g>
+<g fill="url(#g)"><circle cx="130" cy="92" r="15"/><circle cx="256" cy="58" r="15"/><circle cx="382" cy="92" r="15"/><rect x="127" y="234" width="22" height="70" rx="11"/><rect x="166" y="208" width="22" height="122" rx="11"/><rect x="205" y="177" width="22" height="184" rx="11"/><rect x="245" y="145" width="22" height="246" rx="11"/><rect x="285" y="177" width="22" height="184" rx="11"/><rect x="324" y="208" width="22" height="122" rx="11"/><rect x="363" y="234" width="22" height="70" rx="11"/></g>
+</g>
+<text x="480" y="430" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="112" letter-spacing="-7" fill="#f4f1e9">Sound<tspan fill="url(#g)">REI</tspan></text>
+<text x="480" y="485" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="25" letter-spacing="8" fill="#d9a932">SOM EM OUTRO NÍVEL</text>
+</svg>
