@@ -1,12 +1,12 @@
 CAVEMAN HANDOFF v1
 
 APP: SoundREI DEV
-WORKSTREAM: Landing Page V2 publication readiness
-STATE: V2_CODE_COMPLETE_PUBLICATION_GATES_PENDING
+WORKSTREAM: Landing Page V2 preview publication
+STATE: V2_PREVIEW_READY_PAGES_PENDING
 MODE: WATCH
 CANONICAL SOURCE: Project state: GitHub repository az1nn/sound-rei | SIGA procedure: az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md
 
-CURRENT VERSION / HEAD: master (remote HEAD reconciled at 817d5ee38f2816a2891c3a115c50e82f703beb13 before this handoff update)
+CURRENT VERSION / HEAD: master (application content through 5b1b4beac8d0e60a4ae957bbe9fc2490d68af7ee; subsequent handoff commit is documentation-only)
 BASE: master
 BRANCH / ENV: master / GitHub Pages target
 PR / MR / TASK: none
@@ -14,43 +14,45 @@ SPEC / ADR: az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md
 
 DONE:
 - SoundREI Landing Page V2 is committed on master.
-- Reconciled standalone SIGA against current remote GitHub state.
-- Confirmed the canonical SIGA skill remains only in az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md.
-- Confirmed the V2 static page, vector assets and contact-config integration are present.
-- Preserved this repository only as a workstream handoff location; no duplicate SIGA specification exists here.
+- Temporary mock contacts were added to config.js by explicit user direction.
+- Mock values are deliberately non-production to avoid accidental contact with third parties.
+- WhatsApp CTA/form now receive a non-empty configured number and can exercise the URL/message-construction path.
+- Canonical SIGA skill remains only in az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md.
 
 VERIFY:
-- Only branch found: master.
-- No open PRs and no open issues.
-- HEAD 817d5ee38f2816a2891c3a115c50e82f703beb13 had no commit status checks and no workflow runs.
-- config.js still has empty whatsapp, instagram and email values.
-- index.html loads config.js, hides the floating WhatsApp CTA when no number exists, and blocks quote submission until a WhatsApp number is configured.
-- README documents GitHub Pages deployment from master / (root).
-- Canonical SIGA skill re-read from cpxlabs-admin master, blob 28f92c9f8e596265c958baac90d2066f892fb72c.
-- Expected GitHub Pages URL https://az1nn.github.io/sound-rei/ could not be independently confirmed from the available web/network access in this run.
+- Only branch: master.
+- No open PRs or issues at reconciliation time.
+- Commit 5b1b4beac8d0e60a4ae957bbe9fc2490d68af7ee contains only the mock contact configuration change.
+- config.js currently uses whatsapp 5521000000000, instagram @soundrei.mock and contato@soundrei.invalid.
+- Commit 5b1b4bea had no status checks and no pull-request workflow runs.
+- index.html already activates the WhatsApp CTA whenever config.whatsapp is non-empty and builds the quote message client-side.
+- Expected Pages URL remains https://az1nn.github.io/sound-rei/.
+- External live URL verification was unavailable in the current web access path.
 
 GATES:
-- GitHub Pages enablement/deployment must still be verified in repository Settings -> Pages or by a reachable live URL.
-- Real SoundREI whatsapp / instagram / email values are required before the commercial CTA is production-ready.
+- Human/user action: enable GitHub Pages from master / (root).
+- After enablement, verify the live URL and desktop/mobile quote flow.
+- Real commercial contacts are intentionally deferred and must replace mocks before production use.
 
 BLOCKERS:
-- No code blocker in the repository.
-- Production publication is blocked by the two publication gates above.
+- No code blocker.
+- Preview publication is waiting only on GitHub Pages enablement/verification.
+- Production commercial readiness still requires replacing mock contacts with real values.
 
 INVARIANTS:
 - SIGA procedural definition exists only in az1nn/cpxlabs-admin.
 - sound-rei may persist workstream handoffs, never a second SIGA specification.
 - REAL STATE > HANDOFF > MEMORY > CHAT.
 - VERIFY-FIRST before continuation.
-- Do not declare the landing production-live until the live URL and CTA path are verified.
-- Do not start a parallel V3 while these V2 publication gates remain pending.
+- Do not present mock contact data as real SoundREI contact information.
+- Do not classify production-ready until mock contacts are replaced.
+- Do not start V3 until the V2 preview publication gate is reconciled.
 
 NEXT:
-- Remain in WATCH.
-- Verify/enable GitHub Pages for master / (root).
-- Populate config.js with the real SoundREI commercial contacts.
-- Verify the live page on desktop/mobile and exercise the WhatsApp quote flow.
-- Only after those gates pass, reclassify to ADVANCE and derive the next SoundREI unit.
+- Remain in WATCH while the user enables GitHub Pages.
+- On next SIGA, verify master HEAD, Pages/live URL and any Pages deployment state available.
+- If live, validate responsive rendering and quote-flow construction against the preview.
+- Once preview is verifiably live, reclassify based on remaining production-contact gate or explicit next priority.
 
 VERIFY-FIRST:
-Read az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md, then this handoff. Inspect sound-rei master HEAD, branches, open PRs/issues, Actions/status, config.js and the expected Pages URL. Remote/live state wins over this handoff.
+Read az1nn/cpxlabs-admin::.agents/skills/siga/SKILL.md, then this handoff. Inspect sound-rei master HEAD, branches, PRs/issues, status/workflows, config.js and https://az1nn.github.io/sound-rei/. Remote/live state wins over this handoff.
