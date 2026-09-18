@@ -36,7 +36,7 @@ O site é estático e pode ser servido diretamente da branch `master`.
 3. Selecione `master` e `/ (root)`.
 4. Salve.
 
-URL esperada após habilitar Pages:
+URL publicada pelo GitHub Pages:
 
 `https://az1nn.github.io/sound-rei/`
 
@@ -47,3 +47,8 @@ HTML5 + CSS3 + JavaScript puro. Sem framework, build ou dependências externas.
 ## Observação
 
 Os valores exibidos são referências comerciais e não substituem orçamento por escopo.
+
+
+## Discoverability
+
+A V2.1 adiciona canonical URL, favicon vetorial, Open Graph URL/locale, robots.txt, sitemap.xml e dados estruturados LocalBusiness sem publicar os contatos mock como dados comerciais reais.
